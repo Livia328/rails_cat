@@ -1,0 +1,37 @@
+<%= form_with(model: campus_cat) do |form| %>
+  <% if campus_cat.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(campus_cat.errors.count, "error") %> prohibited this campus_cat from being saved:</h2>
+
+      <ul>
+        <% campus_cat.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control",placeholder:"给猫猫取个名字会让他和你更亲昵哦！"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :species, style: "display: block" %>
+    <%= form.text_field :species,class: "form-control",placeholder:"请在这里输入猫猫的品种～" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :age, style: "display: block" %>
+    <%= form.text_field :age , class: "form-control", placeholder:"是什么颜色的猫猫呢？"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contact, style: "display: block" %>
+    <%= form.text_field :contact , class: "form-control",placeholder:"该如何联系你？"%>
+  </div>
+
+  <div>
+    <%= form.submit class:'btn btn-secondary'%>
+  </div>
+<% end %>

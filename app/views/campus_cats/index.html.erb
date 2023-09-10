@@ -1,0 +1,30 @@
+<h1>Campus cats</h1>
+
+<table class="table table-striped table-hover">
+  <thead class = "thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Species </th>
+      <th> Age </th>
+      <th> Contact </th>
+      <th colspan = "3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @campus_cats.each do |campus_cat| %>
+    <tr>
+      <td><%= campus_cat.name %></td>
+      <td><%= campus_cat.species %></td>
+      <td><%= campus_cat.age %></td>
+      <td><%= campus_cat.contact %></td>
+      <td><%= link_to "Show", campus_cat %></td>
+      <td><%= link_to "Edit", edit_campus_cat_path(campus_cat) %></td>
+      <td><%= link_to "Delete", campus_cat, method: :Delete, data:{ comfirm: "Are you sure?"} %></td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "New campus cat", new_campus_cat_path, class: "btn btn-secondary" %>

@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @campus_cat.name %></h1>
+  <p class="lead"><%= "小黑是一只可爱的小黑猫～" %> |
+  
+  </p>
+  <p class="lead"> <%= render @campus_cat %>
+  </p>
+  <br>
+  <%= link_to "Edit", edit_campus_cat_path(@campus_cat), class: "btn btn-secondary" %>
+  <%= link_to "Back", campus_cats_path, class: "btn btn-secondary" %>
+  <%= button_to "Destroy", @campus_cat, method: :delete, class: "btn btn-secondary" %>
+</div>
+

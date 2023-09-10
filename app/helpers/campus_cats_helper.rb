@@ -1,0 +1,2 @@
+module CampusCatsHelper
+end

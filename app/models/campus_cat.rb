@@ -1,0 +1,2 @@
+class CampusCat < ApplicationRecord
+end
